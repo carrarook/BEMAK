@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100vw;
-  background-color: black;
+  background-color: rgb(24, 92, 3) ;
 }
 
 body {
@@ -13,14 +13,11 @@ body {
   font-family: "Merriweather", serif;
 }
 
-
-
 .fugaz-one-regular {
   font-family: "Fugaz One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 
 
 .merriweather-page {
@@ -160,25 +157,17 @@ h3
 }
 
 
+.Images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ou defina uma altura apropriada */
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.img_bemak_process {
+  max-width: 100%;
+  height: auto;
+}
 
 
 
@@ -250,6 +239,7 @@ border-radius: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5rem;
 }
 
 .botao:hover {
@@ -267,7 +257,116 @@ footer {
     height: 10vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding: 0 ; /* espaço nas laterais */
 }
+
+.footerContent {
+  
+    flex: 1;
+    text-align: center;
+}
+
+.socialMedia {
+    display: grid;
+    gap: 0.5rem; /* espaçamento entre os links */
+   
+}
+
+
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+  body , html {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .hero {
+    height: 30vh; /* reduz altura da hero */
+    background: url('imgs/bg1.svg') center center / cover no-repeat fixed;
+  }
+
+  .text {
+    font-size: 4rem; /* reduz tamanho do texto */
+  }
+
+  .TituloSobre, .Especialistas {
+    font-size: 2rem; /* reduz títulos principais */
+  }
+
+  .Quadros {
+    flex-direction: column; /* empilha os quadros */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .QuadroEsquerda, .QuadroDireta {
+    width: 100%; /* ocupa largura total */
+    padding: 20px;
+  }
+
+  .TituloQuadro {
+    font-size: 24px; /* reduz título do quadro */
+  }
+
+  .TextoQuadro, .NomeQuadro {
+    font-size: 14px; /* textos menores */
+  }
+
+  .CarroselQuadro {
+    width: 100%;
+    max-width: none;
+  }
+
+  .servicos h2 {
+    font-size: 2rem; /* reduz título seção serviços */
+  }
+
+  .imageCarousel {
+    width: 100%;
+  }
+
+  .contato {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .contato h2 {
+    font-size: 2rem; /* reduz título contato */
+  }
+
+  .botoes {
+    flex-direction: column; /* empilha botões */
+    gap: 0.5rem;
+  }
+
+  .botao {
+    width: 100%; /* botões ocupam largura total */
+    font-size: 1rem; /* reduz fonte botão */
+  }
+
+  footer {
+    flex-direction: column; /* empilha conteúdo e redes sociais */
+    height: auto; /* altura ajustável */
+    padding: 1rem 0;
+  }
+
+  .footerContent {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .socialMedia {
+    justify-content: center;
+    grid-auto-flow: row;
+    gap: 0.3rem;
+  }
+
+}
+
+
 
