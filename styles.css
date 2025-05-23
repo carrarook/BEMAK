@@ -10,14 +10,10 @@ body {
   justify-content: center;
   align-items: center;
   overflow-x:hidden;
-  font-family: "DM Serif Text", serif;
+  font-family: "Merriweather", serif;
 }
 
-.archivo-black-regular {
-  font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+
 
 .fugaz-one-regular {
   font-family: "Fugaz One", sans-serif;
@@ -25,19 +21,16 @@ body {
   font-style: normal;
 }
 
-.dm-serif-text-regular {
-  font-family: "DM Serif Text", serif;
+
+
+.merriweather-page {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
-
-.dm-serif-text-regular-italic {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-
 
 
 .hero {
@@ -83,44 +76,106 @@ body {
   // } */
 }
 
-.sobre , .contato , .servicos {
+.QuadrosSection{
 
-background-color: rgb(227, 240, 188);
+background-color: rgb(255, 255, 255);
   color: black;
-  height: 100vh;
-  width: 100vw;
 }
 
 
-h2
+h3
 {
     margin: 0;
 }
-.sobre h2 {
-    
+.TituloSobre , .Especialistas {
+  font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 4rem;
-    font-style: bold;
+    font-weight: 700;
     text-align: center;
-
 }
 
-.LeftSideText {
-    font-size: 1.5rem;
-    font-style: bold;
-    text-align: left;
-    width: 40vw;
-    margin-left: 5vw;}
-
-  .RightSideText ul li {
-    list-style: armenian;
-    font-size: 1.5rem;
-    font-weight: bold; 
-    text-align: right;
-    width: 40vw;
-    margin-right: 2vw;
-    display: block; /* ou inline-block */
-    margin-left: auto; /* Isso empurra o elemento para a direita */
+.Especialistas {
+  color: rgb(24, 92, 3);
+  font-weight: bolder;
 }
+
+
+.Quadros {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.QuadroEsquerda {
+    flex: 1;
+    background: url('imgs/bg1.svg') center center / cover no-repeat fixed; 
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+}
+
+
+
+.NomeQuadro {
+    font-size: 18px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.TituloQuadro {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.TextoQuadro {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.QuadroDireta {
+    flex: 2;
+    background: url('imgs/bg1.svg') center center / cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 70%;
+}
+
+.CarroselQuadro {
+    
+    width: 90%;
+    max-width: 500px;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -133,16 +188,20 @@ h2
     text-align: center;
 }
 
-.item { 
-    display: grid;
-    place-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
+.owl-carousel .item {
+    
     text-align: center;
-    background-color: rgb(24, 92, 3);
-    color: white;
-    font-weight: 400;
+    
 }
+
+.owl-carousel {
+  padding: 1rem 0rem 1rem;
+background: #ffffff;
+    color: #000000;
+border-radius: 2rem;
+}
+
+
 
 .imageCarousel {
     border-radius: 5%;
@@ -156,7 +215,7 @@ h2
 /* Contato */
 .contato {
     height: calc(100vh - 10vh); /* Altura total menos a altura do footer */
-    background-color: rgb(227, 240, 188);
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Alinha o conteúdo ao início do contêiner flex */
@@ -212,183 +271,3 @@ footer {
     align-items: center;
 }
 
-
-/* ------------------------- */
-/* --- Responsive Styles --- */
-/* ------------------------- */
-
-/* Mobile (up to 767px) */
-@media (max-width: 767px) {
-  body {
-    font-size: 14px; /* Adjust base font size for mobile if needed */
-  }
-
-  .hero {
-    height: 40vh;
-    background-attachment: scroll; /* Better for mobile performance/compatibility */
-  }
-
-  .text {
-    font-size: 5rem; /* Significantly reduce font size */
-    /* Adjust positioning if needed due to smaller size */
-  }
-
-  .sobre, .contato, .servicos {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    /* min-height adjust if 100vh is too much, or rely on content */
-  }
-
-  .sobre h2, .servicos h2, .contato h2 {
-    font-size: 2.5rem;
-  }
-
-  .LeftSideText {
-    width: 90vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    text-align: center; /* Or left, depending on preference */
-    font-size: 1.2rem;
-  }
-
-  .RightSideText ul li {
-    width: 90vw;
-    margin-right: 5vw;
-    margin-left: 5vw;
-    text-align: center; /* Or left, to match LeftSideText */
-    font-size: 1.2rem;
-  }
-
-  .item {
-    width: 90%;
-    padding: 0.8rem;
-  }
-
-  .imageCarousel {
-    width: 90%;
-  }
-
-  .contato {
-     gap: 1.5rem;
-  }
-
-  .botoes {
-    flex-direction: column; /* Stack buttons on small screens */
-    gap: 0.75rem;
-    align-items: center; /* Center stacked buttons */
-  }
-
-  .botao {
-    padding: 0.8rem 1rem;
-    width: 80%; /* Make buttons wider when stacked */
-    max-width: 300px;
-  }
-
-  .contactLogos {
-    width: 1.5rem;
-  }
-}
-
-/* Tablet (768px to 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .text {
-    font-size: 8rem;
-  }
-
-  .sobre h2, .servicos h2, .contato h2 {
-    font-size: 3.2rem;
-  }
-
-  .LeftSideText {
-    width: 60vw; /* Adjust width for tablets */
-    margin-left: auto; /* Center it if it's the only column */
-    margin-right: auto;
-    text-align: left; /* Revert to left if centered for mobile */
-    font-size: 1.4rem;
-  }
-
-  .RightSideText ul li {
-    width: 60vw; /* Adjust width for tablets */
-    margin-left: auto; /* Center it */
-    margin-right: auto;
-    text-align: right; /* Revert if changed for mobile */
-    font-size: 1.4rem;
-  }
-  /* If LeftSideText and RightSideText are meant to be side-by-side on tablet,
-     you'll need a flex container for them. Assuming they stack or are separate for now. */
-
-  .item {
-    width: 70%;
-  }
-  
-  .botoes {
-    gap: 1rem; /* Restore gap if changed for mobile */
-    flex-direction: row; /* Ensure they are in a row if changed for mobile */
-  }
-
-  .botao {
-    padding: 1rem;
-    width: auto; /* Revert width if changed for mobile */
-  }
-}
-
-/* Notebook/Small Desktop (1024px to 1365px) - often covered by base or tablet */
-/* You can add specific styles here if needed, e.g., for slightly smaller desktops */
-@media (min-width: 1024px) and (max-width: 1365px) {
-    .text {
-        font-size: 10rem; /* Slightly smaller than full desktop if desired */
-    }
-    .LeftSideText, .RightSideText ul li {
-        font-size: 1.4rem; /* Consistent with tablet or slightly larger */
-    }
-}
-
-
-/* Ultrawide Screens (e.g., 1920px and up) */
-@media (min-width: 1920px) {
-  .text {
-    font-size: 14rem; /* Can make it even larger if desired */
-  }
-
-  .LeftSideText {
-    width: 35vw; /* Maintain relative width */
-    max-width: 700px; /* Add max-width for readability */
-    margin-left: 10vw; /* Adjust margins for wider layout */
-    font-size: 1.6rem;
-  }
-
-  .RightSideText ul li {
-    width: 35vw; /* Maintain relative width */
-    max-width: 700px; /* Add max-width for readability */
-    margin-right: 5vw; /* Adjust margins */
-    font-size: 1.6rem;
-  }
-
-  /* If .sobre has .LeftSideText and .RightSideText intended to be side by side:
-  .sobre {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
-  .LeftSideText, .RightSideText {
-      flex-basis: 45%; // Example, adjust as needed
-      margin-left: 0; // Reset individual margins if using flex container
-      margin-right: 0;
-  }
-  .RightSideText ul {
-      margin-left: 0; // Reset
-  }
-  */
-
-
-  .item {
-    width: 60%;
-    max-width: 800px; /* Max width for very large screens */
-  }
-
-  .contato h2, .servicos h2, .sobre h2 {
-      font-size: 5rem;
-  }
-}

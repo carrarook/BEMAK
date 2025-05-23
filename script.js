@@ -21,21 +21,11 @@ document.addEventListener('mousemove', (e) => {
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
-        margin: 10,
+        autowidth: true,
         merge: true,
         autoHeight: true,
         nav: false,
         dots: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 5
-            }
-        }
+        items: 1
     })
 })
