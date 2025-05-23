@@ -1,0 +1,394 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: black;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  overflow-x:hidden;
+  font-family: "DM Serif Text", serif;
+}
+
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fugaz-one-regular {
+  font-family: "Fugaz One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-text-regular-italic {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+  background: url('imgs/bg1.svg') center center / cover no-repeat fixed;
+}
+
+.wrap {
+  position: relative;
+  perspective: 100px;
+  text-transform: uppercase;
+
+}
+
+.text {
+    font-family: "Fugaz One", sans-serif;
+    justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgb(25,25,25);
+  font-size: 12rem;
+  font-style: italic;
+  font-style: bold;
+  transform-style: preserve-3d;
+
+ 
+    
+  &:first-child {
+    position: relative;
+    /* // transform: translate3d(1px, 1px, 5px); */
+  }
+  
+  /* // @for $i from 2 through 11 {
+  //   &:nth-child(#{$i}) {
+  //     transform: translate3d(#{$i + 1}px, #{$i + 1}px, #{$i + 5}px);
+  //   }
+  // } */
+}
+
+.sobre , .contato , .servicos {
+
+background-color: rgb(227, 240, 188);
+  color: black;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+h2
+{
+    margin: 0;
+}
+.sobre h2 {
+    
+    font-size: 4rem;
+    font-style: bold;
+    text-align: center;
+
+}
+
+.LeftSideText {
+    font-size: 1.5rem;
+    font-style: bold;
+    text-align: left;
+    width: 40vw;
+    margin-left: 5vw;}
+
+  .RightSideText ul li {
+    list-style: armenian;
+    font-size: 1.5rem;
+    font-weight: bold; 
+    text-align: right;
+    width: 40vw;
+    margin-right: 2vw;
+    display: block; /* ou inline-block */
+    margin-left: auto; /* Isso empurra o elemento para a direita */
+}
+
+
+
+
+
+
+.servicos h2 {
+    font-size: 4rem;
+    font-style: bold;
+    text-align: center;
+}
+
+.item { 
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: rgb(24, 92, 3);
+    color: white;
+    font-weight: 400;
+}
+
+.imageCarousel {
+    border-radius: 5%;
+    margin-top: 0.4rem;
+    width: 80%;
+    text-align: center;
+    padding-bottom: 0.2rem;
+}
+
+
+/* Contato */
+.contato {
+    height: calc(100vh - 10vh); /* Altura total menos a altura do footer */
+    background-color: rgb(227, 240, 188);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo ao início do contêiner flex */
+    align-items: center;         /* Centraliza horizontalmente o conteúdo (h2 e div.botoes) */
+    gap: 2rem;                   /* Adiciona espaçamento entre o h2 e os botoes, e entre os botoes se houver mais elementos */
+}
+
+.contato h2 {
+    
+    font-size: 4rem;
+    font-weight: bold; 
+    text-align: center; /* Mantém o texto do h2 centralizado dentro do seu próprio box */
+    /* Você pode adicionar um margin-top se quiser um espaço maior do topo da seção */
+    /* margin-top: 2rem; */
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.botao {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+}
+
+.contactLogos {
+    width: 2rem;
+}
+
+
+footer {
+    background-color: rgb(24, 92, 3);
+    color: rgb(0, 0, 0);
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ------------------------- */
+/* --- Responsive Styles --- */
+/* ------------------------- */
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px; /* Adjust base font size for mobile if needed */
+  }
+
+  .hero {
+    height: 40vh;
+    background-attachment: scroll; /* Better for mobile performance/compatibility */
+  }
+
+  .text {
+    font-size: 5rem; /* Significantly reduce font size */
+    /* Adjust positioning if needed due to smaller size */
+  }
+
+  .sobre, .contato, .servicos {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /* min-height adjust if 100vh is too much, or rely on content */
+  }
+
+  .sobre h2, .servicos h2, .contato h2 {
+    font-size: 2.5rem;
+  }
+
+  .LeftSideText {
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-align: center; /* Or left, depending on preference */
+    font-size: 1.2rem;
+  }
+
+  .RightSideText ul li {
+    width: 90vw;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    text-align: center; /* Or left, to match LeftSideText */
+    font-size: 1.2rem;
+  }
+
+  .item {
+    width: 90%;
+    padding: 0.8rem;
+  }
+
+  .imageCarousel {
+    width: 90%;
+  }
+
+  .contato {
+     gap: 1.5rem;
+  }
+
+  .botoes {
+    flex-direction: column; /* Stack buttons on small screens */
+    gap: 0.75rem;
+    align-items: center; /* Center stacked buttons */
+  }
+
+  .botao {
+    padding: 0.8rem 1rem;
+    width: 80%; /* Make buttons wider when stacked */
+    max-width: 300px;
+  }
+
+  .contactLogos {
+    width: 1.5rem;
+  }
+}
+
+/* Tablet (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .text {
+    font-size: 8rem;
+  }
+
+  .sobre h2, .servicos h2, .contato h2 {
+    font-size: 3.2rem;
+  }
+
+  .LeftSideText {
+    width: 60vw; /* Adjust width for tablets */
+    margin-left: auto; /* Center it if it's the only column */
+    margin-right: auto;
+    text-align: left; /* Revert to left if centered for mobile */
+    font-size: 1.4rem;
+  }
+
+  .RightSideText ul li {
+    width: 60vw; /* Adjust width for tablets */
+    margin-left: auto; /* Center it */
+    margin-right: auto;
+    text-align: right; /* Revert if changed for mobile */
+    font-size: 1.4rem;
+  }
+  /* If LeftSideText and RightSideText are meant to be side-by-side on tablet,
+     you'll need a flex container for them. Assuming they stack or are separate for now. */
+
+  .item {
+    width: 70%;
+  }
+  
+  .botoes {
+    gap: 1rem; /* Restore gap if changed for mobile */
+    flex-direction: row; /* Ensure they are in a row if changed for mobile */
+  }
+
+  .botao {
+    padding: 1rem;
+    width: auto; /* Revert width if changed for mobile */
+  }
+}
+
+/* Notebook/Small Desktop (1024px to 1365px) - often covered by base or tablet */
+/* You can add specific styles here if needed, e.g., for slightly smaller desktops */
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .text {
+        font-size: 10rem; /* Slightly smaller than full desktop if desired */
+    }
+    .LeftSideText, .RightSideText ul li {
+        font-size: 1.4rem; /* Consistent with tablet or slightly larger */
+    }
+}
+
+
+/* Ultrawide Screens (e.g., 1920px and up) */
+@media (min-width: 1920px) {
+  .text {
+    font-size: 14rem; /* Can make it even larger if desired */
+  }
+
+  .LeftSideText {
+    width: 35vw; /* Maintain relative width */
+    max-width: 700px; /* Add max-width for readability */
+    margin-left: 10vw; /* Adjust margins for wider layout */
+    font-size: 1.6rem;
+  }
+
+  .RightSideText ul li {
+    width: 35vw; /* Maintain relative width */
+    max-width: 700px; /* Add max-width for readability */
+    margin-right: 5vw; /* Adjust margins */
+    font-size: 1.6rem;
+  }
+
+  /* If .sobre has .LeftSideText and .RightSideText intended to be side by side:
+  .sobre {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .LeftSideText, .RightSideText {
+      flex-basis: 45%; // Example, adjust as needed
+      margin-left: 0; // Reset individual margins if using flex container
+      margin-right: 0;
+  }
+  .RightSideText ul {
+      margin-left: 0; // Reset
+  }
+  */
+
+
+  .item {
+    width: 60%;
+    max-width: 800px; /* Max width for very large screens */
+  }
+
+  .contato h2, .servicos h2, .sobre h2 {
+      font-size: 5rem;
+  }
+}

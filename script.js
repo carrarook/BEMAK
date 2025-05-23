@@ -1,0 +1,41 @@
+const text = document.querySelectorAll('.text');
+const halfX = window.innerWidth / 2;
+const halfY = window.innerHeight / 2;
+
+text.forEach((el, i) => {
+  TweenMax.to(el, 1, {
+    z: 1 * (i + 8)
+  });
+});
+
+document.addEventListener('mousemove', (e) => {
+  text.forEach((el, i) => {
+    TweenMax.to(el, 0.5, {
+      x: (e.clientX - halfX) * (i + 1) * 0.01,
+      y: (e.clientY - halfY) * (i + 1) * 0.01
+    });
+  });
+});
+
+
+$(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        merge: true,
+        autoHeight: true,
+        nav: false,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            }
+        }
+    })
+})
