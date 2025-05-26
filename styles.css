@@ -75,7 +75,7 @@ body {
 
 .QuadrosSection{
 
-background-color: rgb(255, 255, 255);
+background-color: rgb(238, 240, 242);
   color: black;
 }
 
@@ -144,6 +144,68 @@ h3
     width: 70%;
 }
 
+
+/* TESTES QUADROS DIREITA */
+
+.QuadroDiretaSemContainer {
+   flex: 2;
+    background: url('imgs/bg1.svg') center center / cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 70%;
+
+
+}
+
+
+.QuadroDiretaSemContainer .owl-carousel {
+
+  color: #000000;
+  border-radius: none;
+padding-top: 1rem;
+  background: none;
+  -webkit-backdrop-filter: none;
+
+  backdrop-filter: none;
+
+  border-top: none;
+  border-left:none;
+ box-shadow: none;
+}
+
+
+
+.QuadroDiretaPaisagem {
+    flex: 2;
+    background: url('imgs/bgquadroteste.jpg') center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 70%;
+}
+
+.QuadroDiretaPaisagem .owl-carousel {
+
+  color: #000000;
+  border-radius: 2rem;
+padding-top: 1rem;
+  background: rgba(207, 214, 205, 0.249);
+  -webkit-backdrop-filter: blur(10px);
+
+  backdrop-filter: blur(3px);
+
+  border-top: 1px solid rgba(188, 150, 53, 0.4);
+  border-left: 1px solid rgba(188, 150, 53, 0.3);
+ box-shadow: none;
+}
+
+
+
+
+
 .CarroselQuadro {
     
     width: 90%;
@@ -177,17 +239,26 @@ h3
     text-align: center;
 }
 
-.owl-carousel .item {
-    
-    text-align: center;
-    
+
+
+.item {
+
+  text-align: center;
 }
 
 .owl-carousel {
-  padding: 1rem 0rem 1rem;
-background: #ffffff;
-    color: #000000;
-border-radius: 2rem;
+
+  color: #000000;
+  border-radius: 2rem;
+
+  background: rgba(92, 139, 78, 0.249);
+  -webkit-backdrop-filter: blur(10px);
+
+  backdrop-filter: blur(10px);
+
+  border-top: 1px solid rgba(24, 92, 3, 0.4);
+  border-left: 1px solid rgba(24, 92, 3, 0.3);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.89);
 }
 
 
@@ -204,7 +275,7 @@ border-radius: 2rem;
 /* Contato */
 .contato {
     height: calc(100vh - 10vh); /* Altura total menos a altura do footer */
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(238, 240, 242);
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Alinha o conteúdo ao início do contêiner flex */
@@ -253,25 +324,39 @@ border-radius: 2rem;
 
 footer {
     background-color: rgb(24, 92, 3);
-    color: rgb(0, 0, 0);
-    height: 10vh;
+    color: white; /* Melhor contraste */
+    height: auto; /* Altura automática conforme o conteúdo */
     width: 100vw;
     display: flex;
+    justify-content: space-between; /* Separação entre as partes */
     align-items: center;
-    padding: 0 ; /* espaço nas laterais */
+    padding: 1rem 2rem; /* Espaço interno nas laterais e topo/baixo */
+    box-sizing: border-box;
 }
 
 .footerContent {
-  
     flex: 1;
-    text-align: center;
+    text-align: left; /* Alinhamento à esquerda */
+    font-size: 0.9rem;
 }
 
 .socialMedia {
-    display: grid;
-    gap: 0.5rem; /* espaçamento entre os links */
-   
+    display: flex; /* Mudança de grid para flex para alinhar melhor */
+    flex-direction: column; /* Um abaixo do outro */
+    gap: 0.5rem;
+    text-align: right;
 }
+
+.socialMedia a {
+    color: #add8e6; /* Cor mais clara para links */
+    text-decoration: none;
+}
+
+.socialMedia a:hover {
+    text-decoration: underline; /* Efeito hover */
+}
+
+
 
 
 

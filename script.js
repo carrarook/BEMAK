@@ -2,12 +2,6 @@ const text = document.querySelectorAll('.text');
 const halfX = window.innerWidth / 2;
 const halfY = window.innerHeight / 2;
 
-text.forEach((el, i) => {
-  TweenMax.to(el, 1, {
-    z: 1 * (i + 8)
-  });
-});
-
 document.addEventListener('mousemove', (e) => {
   text.forEach((el, i) => {
     TweenMax.to(el, 0.5, {
@@ -25,7 +19,11 @@ $(document).ready(function () {
         merge: true,
         autoHeight: true,
         nav: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
         dots: true,
-        items: 1
+        items:1
+        
     })
 })
+
